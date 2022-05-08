@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('creative_id')->constrained();
+            $table->foreignId('creative_id')->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->string('name');
             $table->date('from');
             $table->date('to');

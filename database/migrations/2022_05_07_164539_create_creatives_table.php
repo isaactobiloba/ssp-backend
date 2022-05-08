@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('creatives', function (Blueprint $table) {
             $table->id();
-            $table->string('image_name');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

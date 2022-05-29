@@ -19,8 +19,9 @@ class CampaignResource extends JsonResource
             'name' => $this->name,
             'from' => $this->from,
             'to' => $this->to,
-            'total_budget' => $this->total_budget,
-            'daily_budget' => $this->daily_budget
+            'totalBudget' => $this->total_budget,
+            'dailyBudget' => $this->daily_budget,
+            'creative' => CreativeResource::collection($this->creative),
         ];
     }
 }

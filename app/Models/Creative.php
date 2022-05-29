@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Creative extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'image_url',
+        'campaign_id',
+    ];
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
+    }
 }

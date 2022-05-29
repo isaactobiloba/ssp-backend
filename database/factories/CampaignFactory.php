@@ -17,7 +17,6 @@ class CampaignFactory extends Factory
     public function definition()
     {
         return [
-            'creative_id' => CreativeFactory::new(),
             'name' => $this->faker->sentence,
             'from' => $this->faker->dateTimeBetween('-1 years', 'now'),
             'to' => $this->faker->dateTimeBetween('now', '+1 years'),

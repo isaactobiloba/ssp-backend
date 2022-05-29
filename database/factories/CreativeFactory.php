@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Campaign;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,6 +18,7 @@ class CreativeFactory extends Factory
     public function definition()
     {
         return [
+            'campaign_id' => Campaign::factory(),
             'image_url' => $this->faker->imageUrl(),
         ];
     }
